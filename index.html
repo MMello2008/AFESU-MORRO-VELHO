@@ -1,269 +1,266 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-bs-theme="auto">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFESU - Educação e Inovação</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> AFESU </title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        /* Paleta de cores: laranja, rosa e vermelho */
-        :root {
-            /* Mantendo a paleta, mas usando nomes mais consistentes com o tema (vermelho/rosa/laranja) */
-            --laranja: #fd7e14; /* Originalmente era o vermelho */
-            --rosa: #d63384;
-            --vermelho: #dc3545; /* Originalmente era o laranja */
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-        .tema-bg {
-            /* Degradê com as cores da paleta */
-            background: linear-gradient(45deg, var(--vermelho), var(--rosa), var(--laranja));
-            color: rgb(247, 240, 240);
-        }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fff5f5, #fff0e6);
+      color: #200202;
+      scroll-behavior: smooth;
+    }
 
-        .card-highlight {
-            /* Destaca o topo do card com a cor principal (vermelho) */
-            border-top: 4px solid var(--vermelho);
-            transition: transform 0.3s ease; /* Adiciona animação ao hover */
-        }
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #f02580, #f37e25, #e70404);
+    }
 
-        .card-highlight:hover {
-            transform: translateY(-5px); /* Efeito de elevação */
-        }
+    .navbar-brand, .nav-link {
+      color: white !important;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-        .carousel-item img {
-            /* Garante que a imagem do carrossel cubra toda a área */
-            object-fit: cover;
-            height: 400px; /* Altura fixa para o carrossel */
-        }
-    </style>
+    .nav-link:hover {
+      color: #f7f6f2 !important;
+    }
+
+    /* Carousel */
+    .carousel {
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel img {
+      height: 500px;
+      object-fit: cover;
+    
+    }
+
+    /* Cards */
+    .card {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(189, 218, 24, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card-title {
+      color: #fa4109;
+      font-weight: 600;
+    }
+
+    /* Seções */
+    section {
+      padding: 60px 0;
+    }
+
+    section h2 {
+      font-weight: 700;
+      color: #f13f09;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* Rodapé */
+    footer {
+      background: linear-gradient(90deg, #f02580, #f37e25, #e70404);
+      color: #fdfcfc;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #ffe066;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
+
+    .social-icons a:hover {
+      color: #fff94c;
+    }
+
+  </style>
 </head>
 <body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home"> AFESU </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Seção Home -->
+  <section id="home" class="container mt-4">
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imagem/maxresdefault.jpg" class="d-block w-100" alt="Imagem 1">
+        </div>
+        <div class="carousel-item">
+          <img src="imagem/afesu.jpg" class="d-block w-100" alt="Imagem 2">
+        </div>
+        <div class="carousel-item">
+          <img src="imagem/TOC0601_1-scaled.jpg" class="d-block w-100" alt="Imagem 3">
+        </div>
+        <div class="carousel-item">
+          <img src="imagem/IMG_2625.jpgjpp.jpg" class="d-block w-100" alt="Imagem 4">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Seção Sobre -->
+  <section id="sobre" class="container text-center">
+    <h2>Sobre o Curso</h2>
+    <p class="fs-5">
+      O curso da <strong>AFESU</strong> é uma instituição comprometida com a educação, cultura e transformação social. 
+      Nosso objetivo é proporcionar às alunas e famílias oportunidades de crescimento, aprendizado e desenvolvimento humano por meio de projetos educativos e culturais.
+      A Afesu tem projetos especialmente desenvolvidos para você, menina ou mulher, de 7 a 25 anos, que quer ser protagonista do seu futuro! Oferecemos desde atividades que complementam a escola até apoio para a iniciação profissional. Além de cursos técnicos para mulheres jovens e adultas.
+      <br>
+      <b> Escolha o projeto que melhor se alinha aos seus objetivos e torne-se uma aluna Afesu.</b>
+    </p>
+  </section>
+
+  <!-- Seção Projetos -->
+<section id="projetos" class="container">
+  <h2>Nossos Projetos</h2>
+
+  <!-- Linha 1 – 3 cartões -->
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <img src="imagem/operador.jpg boaa.jpg" class="card-img-top" alt="Projeto 1">
+        <div class="card-body text-center">
+          <h5 class="card-title">Operador de Microcomputador</h5>
+          <p class="card-text"> <b>tem por objetivo desenvolver competências relacionadas a instalação e configuração de aplicativos, detecção de falhas de hardware e do sistema operacional, assegurando o funcionamento do sistema.</b></p>
+          <a href="https://sp.senai.br/curso/operador-de-microcomputador/94243#:~:text=O%20Curso%20de%20Qualifica%C3%A7%C3%A3o%20Profissional%20Operador%20de%20Microcomputador,do%20sistema%20operacional%2C%20assegurando%20o%20funcionamento%20do%20sistema." class="btn btn-warning">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <img src="imagem/Power-BI.jpg" class="card-img-top" alt="Projeto 2">
+        <div class="card-body text-center">
+          <h5 class="card-title">Power BI</h5>
+          <p class="card-text"> <b> por objetivo o desenvolvimento de competências relacionadas desenvolver soluções por meio da plataforma de business intelligence (BI), utilizado para transformar dados brutos em informações úteis.</b></p>
+          <a href="https://www.sp.senai.br/curso/microsoft-power-bi/102590/" class="btn btn-danger">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <img src="imagem/empresa-cabeamento-estruturado-sp-02-300x225.jpg redes.jpg" class="card-img-top" alt="Projeto 3">
+        <div class="card-body text-center">
+          <h5 class="card-title">Implantações de Redes locais</h5>
+          <p class="card-text"> <b>tem por objetivo o desenvolvimento de competências relativas à identificação de redes e montagem da infraestrutura física garantindo comunicação e conectividade.></b></p>
+          <a href="https://sp.senai.br/curso/redes-de-computadores-implantacao-de-redes-locais/102339" class="btn btn-primary">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Linha 2 – 2 cartões centralizados -->
+  <div class="row g-4 justify-content-center mt-2">
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <img src="imagem/web.jpg" class="card-img-top" alt="Projeto 4">
+        <div class="card-body text-center">
+          <h5 class="card-title"> <b>Designer de Interface Web</h5>
+          <p class="card-text">tem por objetivo desenvolver interfaces web agradáveis, intuitivas e fáceis de usar utilizando ferramentas modernas de design.></b></p>
+          <a href="https://sp.senai.br/curso/designer-de-interface-web/102671" class="btn btn-info">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <img src="imagem/bootstrap.png222.png" class="card-img-top" alt="Projeto 5">
+        <div class="card-body text-center">
+          <h5 class="card-title">BootStrap</h5>
+          <p class="card-text"><b>b>tem por objetivo o desenvolvimento de competências relativas ao desenvolvimento de interfaces web utilizando o framework Bootstrap.></b></p>
+          <a href="https://www.sp.senai.br/curso/interfaces-web-com-bootstrap/102678" class="btn btn-info">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- Seção Contato -->
+  <section id="contato" class="container text-center">
+    <h2>Entre em Contato</h2>
+    <p>📍 Rua Pinto Serva, 123 - São Paulo, SP</p>
+    <p>📞 (11) 98765-4321 | ✉️ contato@afesu.org.br</p>
+    <p>🌐 <a href="https://www.afesu.org.br" target="_blank">www.afesu.org.br</a></p>
+    <p>CNPJ: 12.345.678/0001-90</p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p class="mb-3">© 2025 AFESU - Todos os direitos reservados.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/?locale=pt_BR"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a>
+      </div>
     
-<nav class="navbar navbar-expand-lg navbar-dark tema-bg sticky-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">AFESU</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav me-auto gap-3">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#cards">Temas</a></li>
-                <li class="nav-item"><a class="nav-link" href="#sobre">Quem Somos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>
-
-            <div class="dropdown ms-4">
-                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Tema
-                </button>
-                <ul class="dropdown-menu">
-                    <li><button class="dropdown-item" data-bs-theme-value="light">☀️ Light</button></li>
-                    <li><button class="dropdown-item" data-bs-theme-value="dark">🌙 Dark</button></li>
-                    <li><button class="dropdown-item" data-bs-theme-value="auto">⚙️ Auto</button></li>
-                </ul>
-            </div>
-        </div>
     </div>
-</nav>
+  </footer>
 
-<section id="inicio" class="mt-0"> <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-
-            <div class="carousel-item active" data-bs-interval="5000"> <img src="imagem/afesu.jpg" class="d-block w-100" alt="Alunos estudando tecnologia">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Inovação em Sala de Aula</h5>
-                    <p>Descubra novas formas de ensinar e aprender com a AFESU.</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="imagem/maxresdefault.jpg" class="d-block w-100" alt="Grupo de jovens colaborando">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Metodologias Ativas</h5>
-                    <p>Engajamento e foco no desenvolvimento prático dos estudantes.</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="imagem/" class="d-block w-100" alt="Lousa digital e equipamentos">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Tecnologia e Futuro</h5>
-                    <p>Preparando a próxima geração para os desafios do mercado.</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="imagem/" class="d-block w-100" alt="Jovens aprendendo educação financeira">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Inclusão e Acesso</h5>
-                    <p>Uma educação de qualidade acessível para todos.</p>
-                </div>
-            </div>
-
-        </div>
-        
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-
-        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
-        </button>
-    </div>
-</section>
-
-<section id="cards" class="container py-5">
-    <h2 class="text-center mb-4">Temas Educacionais</h2>
-
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card card-highlight h-100 shadow-sm"> <div class="card-body">
-                    <h5 class="card-title text-danger">Tecnologia na Educação</h5>
-                    <p class="card-text">Como ferramentas digitais transformam o aprendizado moderno.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card card-highlight h-100 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title text-danger">Metodologias Ativas</h5>
-                    <p class="card-text">Aprendizagem baseada em projetos, gamificação e colaboração.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card card-highlight h-100 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title text-danger">Inclusão Escolar</h5>
-                    <p class="card-text">Práticas que promovem o acesso e permanência de todos os alunos.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="card card-highlight h-100 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title text-danger">Educação Financeira</h5>
-                    <p class="card-text">Preparando jovens para decisões conscientes no futuro.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="card card-highlight h-100 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title text-danger">Alfabetização Digital</h5>
-                    <p class="card-text">Competências essenciais para navegar no mundo tecnológico.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section id="sobre" class="py-5 tema-bg">
-    <div class="container">
-        <h2 class="text-center mb-4">Quem Somos</h2>
-        <p class="text-center fs-5">
-            A <strong>AFESU</strong> é uma plataforma voltada para a inovação no ensino,
-            promovendo recursos modernos, conteúdos acessíveis e metodologias eficientes para melhorar
-            o aprendizado de estudantes em todo o Brasil.
-        </p>
-    </div>
-</section>
-
-<footer id="contato" class="py-4 bg-dark text-light">
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-4">
-                <h5>AFESU</h5>
-                <p>Transformando a educação por meio da tecnologia e inovação.</p>
-            </div>
-
-            <div class="col-md-4">
-                <h5>Contato</h5>
-                <p>CNPJ: 12.345.678/0001-90</p>
-                <p>Telefone:
-                    <a href="tel:+5511999999999" class="text-warning">+55 (11) 99999-9999</a>
-                </p>
-            </div>
-
-            <div class="col-md-4">
-                <h5>Redes Sociais</h5>
-                <p><a href="#" class="text-warning">Instagram</a></p>
-                <p><a href="#" class="text-warning">Facebook</a></p>
-                <p><a href="#" class="text-warning">YouTube</a></p>
-            </div>
-
-        </div>
-
-        <hr class="text-light"> <div class="text-center mt-3">
-            <small>© 2025 AFESU – Todos os direitos reservados.</small>
-        </div>
-
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    (() => {
-        // Função para obter o tema preferido do usuário
-        const getPreferredTheme = () => {
-            if (localStorage.getItem('theme')) {
-                return localStorage.getItem('theme');
-            }
-            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        };
-
-        // Função para definir o tema
-        const setTheme = theme => {
-            if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.documentElement.setAttribute('data-bs-theme', 'dark');
-            } else {
-                document.documentElement.setAttribute('data-bs-theme', theme);
-            }
-        };
-
-        setTheme(getPreferredTheme());
-
-        // Atualiza o tema quando o modo de cor do sistema muda (se o tema for 'auto')
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-            const storedTheme = localStorage.getItem('theme');
-            if (storedTheme !== 'light' && storedTheme !== 'dark') {
-                setTheme(getPreferredTheme());
-            }
-        });
-
-        // Adiciona listeners aos botões do dropdown para mudar o tema
-        window.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const theme = toggle.getAttribute('data-bs-theme-value');
-                    localStorage.setItem('theme', theme);
-                    setTheme(theme);
-                });
-            });
-        });
-    })();
-</script>
-
+  <!-- Bootstrap JS + Ícones -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 </body>
 </html>
